@@ -1,0 +1,16 @@
+version: '3'
+services:
+    nginx:
+        build:
+            context: ./nginx/
+            dockerfile: Dockerfile
+        image: nginx/proxy-dev
+        ports:
+            - '80:80'
+        volumes:
+            - './nginx/config/sites:/etc/nginx/sites-available/'
+        networks:
+            - local
+networks:
+    local:
+        driver: bridge

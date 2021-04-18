@@ -1,0 +1,5 @@
+*
+!sites/
+!nginx.conf
+!site.conf.template
+!.gitignore
